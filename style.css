@@ -2,8 +2,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*BARRA DE NAVEGACIÓN */
@@ -16,7 +16,7 @@ nav a{
 
 .contenido{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #1e2227;
     color: #fff;
 }
@@ -72,39 +72,38 @@ ul{
 
 /* CONTENIDO PRINCIPAL */
 
-.row-1 ,.row-2{
-    height: 100%;
+.fila-1 ,.fila2{
+    height: 90%;
     width: 100%;
-    display: flex;
+    display: flex ;
     background-color: cadetblue;
 }
 
-.col-1, .col-2{
-    flex-basis: 50%;
-    height: 100%;
+.columna1, .columna2{
+    flex-basis: 50% ;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.col-2{
+.columna2{
     background: steelblue;
     padding-top: 50px;
     position: relative;
 }
 
-.col-1{
+.columna1{
     background: #1e2227;
     padding-left: 8%;
 }
 
-.col-1 h1{
+.columna1 h1{
     font-size: 74px;
     line-height: 100px;
     margin-bottom: 5px;
 }
 
-.col-1 h2{
+.columna1 h2{
     font-size: 35px;
     margin-top: 60px;
     font-weight: 500;
@@ -121,6 +120,7 @@ button{
     cursor: pointer;
 }
 
+
 /* IMAGEN SHORT */
 
 .rasgos-img{
@@ -133,7 +133,7 @@ button{
 }
 
 .small-img-row{
-    display: flex;
+    display: flex ;
     width: 80%;
     margin: 40px auto 0;
     align-items: center;
@@ -151,8 +151,8 @@ button{
     width: 120px;
 }
 
-.col-2 h2{
-    position: absolute;
+.columna2 h2{
+    position: absolute ;
     left: 5%;
     top: 12% ;
     font-size: 130px;
@@ -161,34 +161,25 @@ button{
 
 /* -----  PRODUCTOS */ 
 
-.col-3, .col-4{
-    flex-basis: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.columna3, .columna4{
+    flex-basis: 50% ;
+    display: flex ;
+    justify-content: center ;
+    flex-direction: column ;
 }
 
-.col-3{
-    background: steelblue;
-    padding-left: 8%;
-    padding-right: 8%;
+.columna3{
+    background: steelblue ;
+    padding-left: 8%  ;
+    padding-right: 8% ;
 }
 
-.col-4{
-    background: #1e2227;
-    padding-top: 50px;
+.columna4{
+    background: #1e2227 ;
+    padding-top: 50px ;
 }
 
-.col-3, .col-4{
-    flex-basis: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.col-3 h1{
+.columna3 h1{
     font-size: 74px;
     line-height: 100px;
     margin-bottom: 5px;
@@ -197,8 +188,8 @@ button{
 
 /* GRILLA COLUMNA 3 */
 
-.col3-grid{
-    display: grid;
+.columna3grid{
+    display: grid ;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     column-gap: 45px;
@@ -207,44 +198,47 @@ button{
     padding-right: 50px;
 }
 
-.col3-grid img{
-    width: 100%;
-    height: auto;
+.columna3grid img{
+    width: 100% ;
+    height: 100%;
     padding-left: 15px;
 }
 
-.col3-grid div{
+.columna3grid div{
     background: steelblue;
     width: 100%;
 }
 
-.col3-grid p{
-    margin-top: 10px;
+.columna3grid p{
     color: white;
     text-align: center;
     background-color: rgba(63,61,71,255);
+    margin-bottom: 0;
 }
+
+
 
 
 /* MEDIA QUERIES INDEX */
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+    
 
-    .row-1{
-        display: flex;
+    .fila-1{
+        display: flex ;
         flex-direction: column;
     }
     
-    .col-1, .col-2{
+    .columna1, .columna2{
         display: flex;
-        flex-direction: column;
+        flex-direction: column ;
     }
 
     #button{
         margin-bottom: 30px;
     }
 
-    .col-1 h1{
+    .columna1 h1{
         font-size: 53px;
         line-height: 70px;
         margin-bottom: 5px;
@@ -253,11 +247,11 @@ button{
 
     .small-img-row{
         display: flex;
-        flex-direction: column;
+        flex-direction: column ;
     }
 
     .caja1, .caja2{
-        display: flex;
+        display: flex ;
         flex-wrap: nowrap;      
         padding: 20px;  
     }
@@ -266,7 +260,7 @@ button{
         margin: 20px;
     }
 
-    .col-2 h2{
+    .columna2 h2{
         position: absolute;
         left: 5%;
         top: 12% ;
@@ -278,10 +272,10 @@ button{
         display: none;
     }
 
-    nav, .col-1 h2{
-        display: flex;
-        justify-content: center;
-        align-items: center;       
+    nav, .columna1 h2{
+        display: flex ;
+        justify-content: center ;
+        align-items: center ;       
     }
 
     #button{
@@ -289,26 +283,26 @@ button{
     }
 
 
-    .col-1{
+    .columna1{
         padding-left: 0%;
     }
 
-    .col-1 p{
+    .columna1 p{
         padding-left: 8%;
     }
 
     /* PRODUCTOS */
 
-    .row-2{
-        display: flex;
-        flex-direction: column;
+    .fila2{
+        display: flex ;
+        flex-direction: column ;
     }
     
-    .col-3, .col-4{
+    .columna3, .columna4{
         display: block;
     }
 
-    .col-3 h1{
+    .columna3 h1{
         font-size: 49px;
         line-height: 70px;
         margin-bottom: 5px;
@@ -316,23 +310,27 @@ button{
         text-align: center;
     }
 
-    .col3-grid{
-        display: flex;
-        flex-direction: column;
+    .columna3grid{
+        display: flex ;
+        flex-direction: column ;
         background: #1e2227;
     }
 
-    .col3-grid div{
-        object-fit: cover;
+    .columna3grid div{
+        object-fit: cover ;
     }
 
-    .col3-grid div img{
-        object-fit: contain;
+    .columna3grid div img{
+        object-fit: contain ;
     }
 
-    .col-3 p{
+    .columna3 p{
         text-align: center;
         margin-bottom: 15px;
     }
 
 }
+
+/* FOOTER */
+
+
