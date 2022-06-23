@@ -89,7 +89,7 @@ ul{
 }
 
 .columna2{
-    background: steelblue;
+    background:  $colorceleste;
     padding-top: 50px;
     position: relative;
 }
@@ -115,7 +115,7 @@ button{
     display: inline-block;
     width: fit-content;
     padding: 18px 50px;
-    background-color: steelblue;
+    background-color:  $colorceleste;
     color: #fff;
     font-size: 18px;
     margin-top: 30px;
@@ -171,7 +171,7 @@ button{
 }
 
 .columna3{
-    background: steelblue ;
+    background: $colorceleste;
     padding-left: 8%  ;
     padding-right: 8% ;
 }
@@ -207,7 +207,7 @@ button{
 }
 
 .columna3grid div{
-    background: steelblue;
+    background: $colorceleste;
     width: 100%;
 }
 
@@ -338,7 +338,7 @@ button{
 /* MARCAS */
 
 .filaMarcas{
-    background-color:  steelblue ;
+    background-color:  $colorceleste;
 }
 
 .filaMarcas h1{
@@ -356,7 +356,7 @@ button{
 
 
 .gridMarcas{
-    background-color: steelblue;
+    background-color: $colorceleste ;
     @include grids;
     div{
         @include flexgrids;
@@ -422,3 +422,38 @@ button{
 
 
   /* TERMINO LA PRUEBA */
+
+  /* NOSOTROS */
+  
+  .filaNosotros{
+    h1{
+        font-size: 49px;
+        line-height: 70px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+        background-color: $colorceleste;
+        color: white;
+    }
+  }
+
+  .gridNosotros{
+    background-color: $colorceleste;
+    @include gridsNosotros;
+    div{
+        @include flexgrids;
+        background-color: #1e2227;
+    }
+    img{
+        align-self: center;
+        width: 250px;
+        height: 250px;
+        padding: 20px;
+    }
+    p{
+        padding: 20px;
+        color: white;
+    }
+}
+

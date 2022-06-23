@@ -14,3 +14,15 @@
     justify-content: center;
     flex-direction: column;
 }
+
+@mixin gridsNosotros{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+$colorceleste: steelblue;
