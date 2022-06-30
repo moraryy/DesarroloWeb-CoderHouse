@@ -26,3 +26,35 @@
 }
 
 $colorceleste: steelblue;
+
+
+$colorespagina:(/* COLORES EN LA PAGINA */
+    celeste: steelblue,
+    grisAcio: #1e2227,
+    blancoCremita: #ccc,
+    blancox: white,
+);
+
+@each $color, $valor in $colorespagina {
+    .coloresgenericos--#{$color}{
+        background-color: $valor;
+    }
+}
+
+
+$colorletra:(/* COLORES EN LA PAGINA */
+    Letraceleste: steelblue,
+    LetragrisAcio: #1e2227,
+    LetrablancoCremita: #ccc,
+    LetraBlanca: white,
+);
+
+@each $color,$valor in $colorletra{
+    .colorletra--#{$color}{
+        color: $valor;
+    }
+}
+
+
+
+

@@ -9,68 +9,69 @@
 
 /*BARRA DE NAVEGACIÓN */
 
-
-
-nav a{
-    color: #fff ;
-}
-
-.contenido{
+nav a {
+    color: map-get($colorletra, LetraBlanca);
+  }
+  
+  .contenido {
     width: 100%;
     height: 100%;
-    background: #1e2227;
-    color: #fff;
-}
-
-nav{
+    background:  map-get($colorespagina, grisAcio);
+    color: map-get($colorletra, LetraBlanca);
+  }
+  
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center ;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 30px 8%;
     position: relative;
     top: 0;
     width: 100%;
-    background: #1e2227;   
-    z-index: 1; 
-}
-
-.logo{
+    background:  map-get($colorespagina, grisAcio);
+    z-index: 1;
+  }
+  
+  .logo {
     width: 120px;
     cursor: pointer;
-}
-
-.nav-icons img{
+  }
+  
+  .nav-icons img {
     width: 30px;
     margin-left: 30px;
     cursor: pointer;
     position: relative;
-}
-
-#menu li>a{
-    color: white;
+  }
+  
+  #menu li > a {
+    color: map-get($colorletra, LetraBlanca);
     padding: 10px;
     display: block;
     text-decoration: none;
     min-width: 110px;
-    
-}
-
-#menu li>a:hover{
+  }
+  
+  #menu li > a:hover {
     color: #000;
     background-color: #eaeaea;
-}
-
-
-
-#menu>li{
+  }
+  
+  #menu > li {
     float: left;
-    text-align:center
-}
-
-ul{
+    text-align: center;
+  }
+  
+  ul {
     list-style: none;
     padding-top: 1rem;
-}
+  }
 
 /* CONTENIDO PRINCIPAL */
 
@@ -89,13 +90,13 @@ ul{
 }
 
 .columna2{
-    background:  $colorceleste;
+    background-color:  map-get($colorespagina, celeste);
     padding-top: 50px;
     position: relative;
 }
 
 .columna1{
-    background: #1e2227;
+    background-color:  map-get($colorespagina, grisAcio);
     padding-left: 8%;
 }
 
@@ -115,12 +116,13 @@ button{
     display: inline-block;
     width: fit-content;
     padding: 18px 50px;
-    background-color:  $colorceleste;
-    color: #fff;
+    background-color: map-get($colorespagina, celeste) ;
+    color: map-get($colorletra, LetraBlanca);
     font-size: 18px;
     margin-top: 30px;
     cursor: pointer;
 }
+
 
 
 /* IMAGEN SHORT */
@@ -128,10 +130,9 @@ button{
 .rasgos-img{
     width: 100%;
     text-align: center;
-}
-
-.rasgos-img img{
-    width: 60%;
+    img{
+        width: 60%;
+    }
 }
 
 .small-img-row{
@@ -145,7 +146,7 @@ button{
 .img-chica{
     width: 80px;
     height: 80px;
-    background: #ccc;
+    background-color: map-get($colorespagina , blancoCremita);
     margin-bottom: 64px;
 }
 
@@ -171,22 +172,22 @@ button{
 }
 
 .columna3{
-    background: $colorceleste;
+    background: map-get($colorespagina, celeste);
     padding-left: 8%  ;
     padding-right: 8% ;
+    h1{
+        font-size: 74px;
+        line-height: 100px;
+        margin-bottom: 5px;
+        padding-bottom: 80px;
+    }
 }
 
 .columna4{
-    background: #1e2227 ;
+    background:  map-get($colorespagina, grisAcio);
     padding-top: 50px ;
 }
 
-.columna3 h1{
-    font-size: 74px;
-    line-height: 100px;
-    margin-bottom: 5px;
-    padding-bottom: 80px;
-}
 
 /* GRILLA COLUMNA 3 */
 
@@ -198,26 +199,22 @@ button{
     row-gap: 120px;
     padding-left: 50px;
     padding-right: 50px;
+    div{
+        background-color: map-get($colorespagina, celeste);
+        width: 100%;
+    }
+    img{
+        width: 100% ;
+        height: 100%;
+        padding-left: 15px;
+    }
+    p{
+        color: map-get($colorletra, LetraBlanca);
+        text-align: center;
+        background-color: rgba(63,61,71,255);
+        margin-bottom: 0;
+    }
 }
-
-.columna3grid img{
-    width: 100% ;
-    height: 100%;
-    padding-left: 15px;
-}
-
-.columna3grid div{
-    background: $colorceleste;
-    width: 100%;
-}
-
-.columna3grid p{
-    color: white;
-    text-align: center;
-    background-color: rgba(63,61,71,255);
-    margin-bottom: 0;
-}
-
 
 
 
@@ -225,7 +222,7 @@ button{
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
     
-
+  
     .fila-1{
         display: flex ;
         flex-direction: column;
@@ -235,11 +232,11 @@ button{
         display: flex;
         flex-direction: column ;
     }
-
+    
     #button{
         margin-bottom: 30px;
     }
-
+    
     .columna1 h1{
         font-size: 53px;
         line-height: 70px;
@@ -247,22 +244,22 @@ button{
         padding-left: 8%;
         padding-right: 8%;
     }
-
+    
     .small-img-row{
         display: flex;
         flex-direction: column ;
     }
-
+    
     .caja1, .caja2{
         display: flex ;
         flex-wrap: nowrap;      
         padding: 20px;  
     }
-
+    
     .img-chica{
         margin: 20px;
     }
-
+    
     .columna2 h2{
         position: absolute;
         left: 5%;
@@ -270,31 +267,31 @@ button{
         font-size: 80px;
         opacity: 0.3;
     }
-
+    
     nav ul{
         display: none;
     }
-
+    
     nav, .columna1 h2{
         display: flex ;
         justify-content: center ;
-        align-items: center ;       
+        align-items: center;    
     }
-
+    
     #button{
         align-self: center;
     }
-
-
+    
+    
     .columna1{
         padding-left: 0%;
     }
-
+    
     .columna1 p{
         padding-left: 8%;
         padding-right: 8%;   
     }
-
+    
     /* PRODUCTOS */
 
     .fila2{
@@ -317,7 +314,7 @@ button{
     .columna3grid{
         display: flex ;
         flex-direction: column ;
-        background: #1e2227;
+        background: map-get($colorespagina, grisAcio);
     }
 
     .columna3grid div{
@@ -338,17 +335,16 @@ button{
 /* MARCAS */
 
 .filaMarcas{
-    background-color:  $colorceleste;
-}
-
-.filaMarcas h1{
-    font-size: 49px;
-    line-height: 70px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 0;
-    background-color: #000;
+    background-color:  map-get($colorespagina, celeste);
+    h1{
+        font-size: 49px;
+        line-height: 70px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+        background-color: map-get($colorespagina, celeste);
+    }
 }
 
 
@@ -360,7 +356,7 @@ button{
     @include grids;
     div{
         @include flexgrids;
-        background-color: #1e2227;
+        background-color: map-get($colorespagina, grisAcio);
     }
     img{
         align-self: center;
@@ -376,24 +372,23 @@ button{
 
 /* PRUEBA MENU HAMBURGUESA */
 
-.topnav{
-    display: none;
-}
+
 
 .topnav {
     background-color: #333;
     overflow: hidden;
+    display: none;
+    a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }  
   }
   
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
   
   .topnav a:hover {
     background-color: #ddd;
@@ -402,7 +397,7 @@ button{
   
   .topnav a.active {
     background-color: #04AA6D;
-    color: white;
+    color: map-get($colorletra, LetraBlanca);
   }
   
   .topnav .icon {
@@ -412,12 +407,12 @@ button{
   @media screen and (min-width: 320px) and (max-width: 480px){
     .topnav{
         display: flex;
-        justify-content: center;   
+        justify-content: center;
+        a{
+            font-size: 13px;
+        }   
     }
 
-    .topnav a{
-        font-size: 13px;
-    }
   }
 
 
@@ -434,7 +429,7 @@ button{
         padding-bottom: 30px;
         margin-bottom: 0;
         background-color: $colorceleste;
-        color: white;
+        color: map-get($colorletra, LetraBlanca);
     }
   }
 
@@ -443,7 +438,7 @@ button{
     @include gridsNosotros;
     div{
         @include flexgrids;
-        background-color: #1e2227;
+        background-color:  map-get($colorespagina, grisAcio);
     }
     img{
         align-self: center;
@@ -453,7 +448,108 @@ button{
     }
     p{
         padding: 20px;
-        color: white;
+        color: map-get($colorletra, LetraBlanca);
     }
 }
+
+/* PANEL DE CLIENTES */
+
+.signupFrm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .form {
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        border-radius: 8px;
+        padding: 20px 40px;
+        box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+      }
+      .title {
+        font-size: 50px;
+        margin-bottom: 50px;
+      }
+      .inputContainer {
+        position: relative;
+        height: 45px;
+        width: 90%;
+        margin-bottom: 17px;
+        .input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            border: 1px solid #DADCE0;
+            border-radius: 7px;
+            font-size: 16px;
+            padding: 0 20px;
+            outline: none;
+            background: none;
+            z-index: 1;
+          }
+          .label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 0 4px;
+            background-color: map-get($colorespagina, blancox);
+            color: #DADCE0;
+            font-size: 16px;
+            transition: 0.5s;
+            z-index: 0;
+          }
+          
+      }
+  }
+    
+  ::placeholder {
+    color: transparent;
+  }
+    
+  .submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: purple;
+    color: map-get($colorletra, LetraBlanca);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  
+  .submitBtn:hover {
+    background-color: #9867C5;
+    transform: translateY(-2px);
+  }
+  
+  .input:focus + .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: purple;
+  }
+  
+  .input:focus {
+    border: 2px solid purple;
+  }
+  
+  .input:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .loginPanel{
+    background-color:  map-get($colorespagina, celeste);
+  }
+
+
 

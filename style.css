@@ -1,34 +1,59 @@
 @charset "UTF-8";
+.coloresgenericos--celeste {
+  background-color: steelblue;
+}
+
+.coloresgenericos--grisAcio {
+  background-color: #1e2227;
+}
+
+.coloresgenericos--blancoCremita {
+  background-color: #ccc;
+}
+
+.coloresgenericos--blancox {
+  background-color: white;
+}
+
+.colorletra--Letraceleste {
+  color: steelblue;
+}
+
+.colorletra--LetragrisAcio {
+  color: #1e2227;
+}
+
+.colorletra--LetrablancoCremita {
+  color: #ccc;
+}
+
+.colorletra--LetraBlanca {
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 /*BARRA DE NAVEGACIÓN */
 nav a {
-  color: #fff;
+  color: white;
 }
 
 .contenido {
   width: 100%;
   height: 100%;
   background: #1e2227;
-  color: #fff;
+  color: white;
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 30px 8%;
   position: relative;
   top: 0;
@@ -76,44 +101,32 @@ ul {
 .fila-1, .fila2 {
   height: 90%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: cadetblue;
 }
 
 .columna1, .columna2 {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-basis: 50%;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .columna2 {
-  background: steelblue;
+  background-color: steelblue;
   padding-top: 50px;
   position: relative;
 }
 
 .columna1 {
-  background: #1e2227;
+  background-color: #1e2227;
   padding-left: 8%;
-  padding-right: 8%;
 }
 
 .columna1 h1 {
   font-size: 74px;
   line-height: 100px;
   margin-bottom: 5px;
-  padding-top: 20px;
 }
 
 .columna1 h2 {
@@ -129,7 +142,7 @@ button {
   width: fit-content;
   padding: 18px 50px;
   background-color: steelblue;
-  color: #fff;
+  color: white;
   font-size: 18px;
   margin-top: 30px;
   cursor: pointer;
@@ -140,28 +153,22 @@ button {
   width: 100%;
   text-align: center;
 }
-
 .rasgos-img img {
   width: 60%;
 }
 
 .small-img-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 80%;
   margin: 40px auto 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .img-chica {
   width: 80px;
   height: 80px;
-  background: #ccc;
+  background-color: #ccc;
   margin-bottom: 64px;
 }
 
@@ -179,18 +186,10 @@ button {
 
 /* -----  PRODUCTOS */
 .columna3, .columna4 {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-basis: 50%;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .columna3 {
@@ -198,12 +197,6 @@ button {
   padding-left: 8%;
   padding-right: 8%;
 }
-
-.columna4 {
-  background: #1e2227;
-  padding-top: 50px;
-}
-
 .columna3 h1 {
   font-size: 74px;
   line-height: 100px;
@@ -211,62 +204,54 @@ button {
   padding-bottom: 80px;
 }
 
+.columna4 {
+  background: #1e2227;
+  padding-top: 50px;
+}
+
 /* GRILLA COLUMNA 3 */
 .columna3grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-  -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
-  -webkit-column-gap: 45px;
-          column-gap: 45px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
   row-gap: 120px;
   padding-left: 50px;
   padding-right: 50px;
 }
-
+.columna3grid div {
+  background-color: steelblue;
+  width: 100%;
+}
 .columna3grid img {
   width: 100%;
   height: 100%;
   padding-left: 15px;
 }
-
-.columna3grid div {
-  background: steelblue;
-  width: 100%;
-}
-
 .columna3grid p {
   color: white;
   text-align: center;
-  background-color: #3f3d47;
+  background-color: rgb(63, 61, 71);
   margin-bottom: 0;
 }
 
 /* MEDIA QUERIES INDEX */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .fila-1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   .columna1, .columna2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   #button {
     margin-bottom: 30px;
   }
+
   .columna1 h1 {
     font-size: 53px;
     line-height: 70px;
@@ -274,26 +259,22 @@ button {
     padding-left: 8%;
     padding-right: 8%;
   }
+
   .small-img-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   .caja1, .caja2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     padding: 20px;
   }
+
   .img-chica {
     margin: 20px;
   }
+
   .columna2 h2 {
     position: absolute;
     left: 5%;
@@ -301,45 +282,40 @@ button {
     font-size: 80px;
     opacity: 0.3;
   }
+
   nav ul {
     display: none;
   }
+
   nav, .columna1 h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
+
   #button {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
   }
+
   .columna1 {
     padding-left: 0%;
   }
+
   .columna1 p {
     padding-left: 8%;
     padding-right: 8%;
   }
+
   /* PRODUCTOS */
   .fila2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   .columna3, .columna4 {
     display: block;
   }
+
   .columna3 h1 {
     font-size: 49px;
     line-height: 70px;
@@ -347,35 +323,32 @@ button {
     margin-top: 15px;
     text-align: center;
   }
+
   .columna3grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     background: #1e2227;
   }
+
   .columna3grid div {
     -o-object-fit: cover;
        object-fit: cover;
   }
+
   .columna3grid div img {
     -o-object-fit: contain;
        object-fit: contain;
   }
+
   .columna3 p {
     text-align: center;
     margin-bottom: 15px;
   }
 }
-
 /* MARCAS */
 .filaMarcas {
   background-color: steelblue;
 }
-
 .filaMarcas h1 {
   font-size: 49px;
   line-height: 70px;
@@ -389,57 +362,37 @@ button {
 /* GRID MARCAS */
 .gridMarcas {
   background-color: steelblue;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   padding: 40px;
   text-align: center;
 }
-
 .gridMarcas div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: #1e2227;
 }
-
 .gridMarcas img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   width: 200px;
   height: 200px;
   padding: 20px;
 }
-
 .gridMarcas p {
   padding: 20px;
 }
 
 /* PRUEBA MENU HAMBURGUESA */
 .topnav {
-  display: none;
-}
-
-.topnav {
   background-color: #333;
   overflow: hidden;
+  display: none;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -466,18 +419,13 @@ button {
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .topnav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .topnav a {
     font-size: 13px;
   }
 }
-
 /* TERMINO LA PRUEBA */
 /* NOSOTROS */
 .filaNosotros h1 {
@@ -493,79 +441,57 @@ button {
 
 .gridNosotros {
   background-color: steelblue;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -ms-grid-rows: auto auto auto auto;
-      grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 20px;
   padding: 40px;
   text-align: center;
 }
-
 .gridNosotros div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: #1e2227;
 }
-
 .gridNosotros img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   width: 250px;
   height: 250px;
   padding: 20px;
 }
-
 .gridNosotros p {
   padding: 20px;
   color: white;
 }
 
-
 /* PANEL DE CLIENTES */
-
 .signupFrm {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-
-.form {
-  background-color: white;
+.signupFrm .form {
+  background-color: rgb(255, 255, 255);
   width: 400px;
   border-radius: 8px;
   padding: 20px 40px;
-  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
 }
-
-.title {
+.signupFrm .title {
   font-size: 50px;
   margin-bottom: 50px;
 }
-
-.inputContainer {
+.signupFrm .inputContainer {
   position: relative;
   height: 45px;
   width: 90%;
   margin-bottom: 17px;
 }
-
-.input {
+.signupFrm .inputContainer .input {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -579,12 +505,7 @@ button {
   background: none;
   z-index: 1;
 }
-
-::placeholder {
-  color: transparent;
-}
-
-.label {
+.signupFrm .inputContainer .label {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -594,6 +515,18 @@ button {
   font-size: 16px;
   transition: 0.5s;
   z-index: 0;
+}
+
+::-moz-placeholder {
+  color: transparent;
+}
+
+:-ms-input-placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: transparent;
 }
 
 .submitBtn {
@@ -627,7 +560,7 @@ button {
   border: 2px solid purple;
 }
 
-.input:not(:placeholder-shown)+ .label {
+.input:not(:-moz-placeholder-shown) + .label {
   top: -7px;
   left: 3px;
   z-index: 10;
@@ -635,11 +568,22 @@ button {
   font-weight: 600;
 }
 
-.loginPanel{
-  background-color:  steelblue;
+.input:not(:-ms-input-placeholder) + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-/* . */ 
+.input:not(:placeholder-shown) + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+}
 
-
-/*# sourceMappingURL=style.css.map */
+.loginPanel {
+  background-color: steelblue;
+}/*# sourceMappingURL=style.css.map */
