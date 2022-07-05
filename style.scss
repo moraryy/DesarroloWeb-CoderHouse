@@ -7,49 +7,117 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/*BARRA DE NAVEGACIÓN */
-
-nav a {
-    color: map-get($colorletra, LetraBlanca);
-  }
+/*ANIDE CASI TODO CON TODO // OSEA ESTO SERIA TODO LA PAGINA PRINCIPAL */
   
   .contenido {
     width: 100%;
     height: 100%;
     background:  map-get($colorespagina, grisAcio);
     color: map-get($colorletra, LetraBlanca);
+    nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 30px 8%;
+        position: relative;
+        top: 0;
+        width: 100%;
+        background:  map-get($colorespagina, grisAcio);
+        z-index: 1;
+        ul {
+            list-style: none;
+            padding-top: 1rem;
+            a {
+                color: map-get($colorletra, LetraBlanca);
+              }
+          }
+        .logo {
+            width: 120px;
+            cursor: pointer;
+            color: white;
+          }
+      }
+      .fila-1{
+        height: 90%;
+        width: 100%;
+        display: flex ;
+        background-color: cadetblue;
+        .columna1{
+            background-color:  map-get($colorespagina, grisAcio);
+            padding-left: 8%;
+            flex-basis: 50% ;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            h1{
+                font-size: 74px;
+                line-height: 100px;
+                margin-bottom: 5px;
+            }
+            h2{
+                font-size: 35px;
+                margin-top: 60px;
+                font-weight: 500;
+            }
+            button{
+                display: inline-block;
+                width: fit-content;
+                padding: 18px 50px;
+                background-color: map-get($colorespagina, celeste) ;
+                color: map-get($colorletra, LetraBlanca);
+                font-size: 18px;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+        }
+        .columna2{
+            background-color:  map-get($colorespagina, celeste);
+            padding-top: 50px;
+            position: relative;
+            flex-basis: 50% ;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .rasgos-img{
+                width: 100%;
+                text-align: center;
+                img{
+                    width: 60%;
+                }
+            }
+            .small-img-row{
+                display: flex ;
+                width: 80%;
+                margin: 40px auto 0;
+                align-items: center;
+                justify-content: space-around;
+                .img-chica{
+                    width: 80px;
+                    height: 80px;
+                    background-color: map-get($colorespagina , blancoCremita);
+                    margin-bottom: 64px;
+                    img{
+                        width: 120px;
+                    }
+                }
+            }
+            h2{
+                position: absolute ;
+                left: 5%;
+                top: 12% ;
+                font-size: 130px;
+                opacity: 0.3;
+            }    
+        }
+    }
   }
-  
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 30px 8%;
-    position: relative;
-    top: 0;
-    width: 100%;
-    background:  map-get($colorespagina, grisAcio);
-    z-index: 1;
-  }
-  
-  .logo {
-    width: 120px;
-    cursor: pointer;
-  }
-  
-  .nav-icons img {
-    width: 30px;
-    margin-left: 30px;
-    cursor: pointer;
-    position: relative;
-  }
-  
+    
   #menu li > a {
     color: map-get($colorletra, LetraBlanca);
     padding: 10px;
@@ -68,355 +136,100 @@ nav a {
     text-align: center;
   }
   
-  ul {
-    list-style: none;
-    padding-top: 1rem;
-  }
+/* PAGINA PRODUCTOS (ANIDACIÓN) */
 
-/* CONTENIDO PRINCIPAL */
-
-.fila-1 ,.fila2{
+.fila2{
     height: 90%;
     width: 100%;
     display: flex ;
     background-color: cadetblue;
-}
-
-.columna1, .columna2{
-    flex-basis: 50% ;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.columna2{
-    background-color:  map-get($colorespagina, celeste);
-    padding-top: 50px;
-    position: relative;
-}
-
-.columna1{
-    background-color:  map-get($colorespagina, grisAcio);
-    padding-left: 8%;
-}
-
-.columna1 h1{
-    font-size: 74px;
-    line-height: 100px;
-    margin-bottom: 5px;
-}
-
-.columna1 h2{
-    font-size: 35px;
-    margin-top: 60px;
-    font-weight: 500;
-}
-
-button{
-    display: inline-block;
-    width: fit-content;
-    padding: 18px 50px;
-    background-color: map-get($colorespagina, celeste) ;
-    color: map-get($colorletra, LetraBlanca);
-    font-size: 18px;
-    margin-top: 30px;
-    cursor: pointer;
-}
-
-
-
-/* IMAGEN SHORT */
-
-.rasgos-img{
-    width: 100%;
-    text-align: center;
-    img{
-        width: 60%;
-    }
-}
-
-.small-img-row{
-    display: flex ;
-    width: 80%;
-    margin: 40px auto 0;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.img-chica{
-    width: 80px;
-    height: 80px;
-    background-color: map-get($colorespagina , blancoCremita);
-    margin-bottom: 64px;
-}
-
-.img-chica img{
-    width: 120px;
-}
-
-.columna2 h2{
-    position: absolute ;
-    left: 5%;
-    top: 12% ;
-    font-size: 130px;
-    opacity: 0.3;
-}
-
-/* -----  PRODUCTOS */ 
-
-.columna3, .columna4{
-    flex-basis: 50% ;
-    display: flex ;
-    justify-content: center ;
-    flex-direction: column ;
-}
-
-.columna3{
-    background: map-get($colorespagina, celeste);
-    padding-left: 8%  ;
-    padding-right: 8% ;
-    h1{
-        font-size: 74px;
-        line-height: 100px;
-        margin-bottom: 5px;
-        padding-bottom: 80px;
-    }
-}
-
-.columna4{
-    background:  map-get($colorespagina, grisAcio);
-    padding-top: 50px ;
-}
-
-
-/* GRILLA COLUMNA 3 */
-
-.columna3grid{
-    display: grid ;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    column-gap: 45px;
-    row-gap: 120px;
-    padding-left: 50px;
-    padding-right: 50px;
-    div{
-        background-color: map-get($colorespagina, celeste);
-        width: 100%;
-    }
-    img{
-        width: 100% ;
-        height: 100%;
-        padding-left: 15px;
-    }
-    p{
-        color: map-get($colorletra, LetraBlanca);
-        text-align: center;
-        background-color: rgba(63,61,71,255);
-        margin-bottom: 0;
-    }
-}
-
-
-
-/* MEDIA QUERIES INDEX */
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    
-  
-    .fila-1{
-        display: flex ;
-        flex-direction: column;
-    }
-    
-    .columna1, .columna2{
-        display: flex;
-        flex-direction: column ;
-    }
-    
-    #button{
-        margin-bottom: 30px;
-    }
-    
-    .columna1 h1{
-        font-size: 53px;
-        line-height: 70px;
-        margin-bottom: 5px;
-        padding-left: 8%;
-        padding-right: 8%;
-    }
-    
-    .small-img-row{
-        display: flex;
-        flex-direction: column ;
-    }
-    
-    .caja1, .caja2{
-        display: flex ;
-        flex-wrap: nowrap;      
-        padding: 20px;  
-    }
-    
-    .img-chica{
-        margin: 20px;
-    }
-    
-    .columna2 h2{
-        position: absolute;
-        left: 5%;
-        top: 12% ;
-        font-size: 80px;
-        opacity: 0.3;
-    }
-    
-    nav ul{
-        display: none;
-    }
-    
-    nav, .columna1 h2{
+    .columna3{
+        flex-basis: 50% ;
         display: flex ;
         justify-content: center ;
-        align-items: center;    
-    }
-    
-    #button{
-        align-self: center;
-    }
-    
-    
-    .columna1{
-        padding-left: 0%;
-    }
-    
-    .columna1 p{
-        padding-left: 8%;
-        padding-right: 8%;   
-    }
-    
-    /* PRODUCTOS */
-
-    .fila2{
-        display: flex ;
         flex-direction: column ;
+        background: map-get($colorespagina, celeste);
+        padding-left: 10%;
+        padding-right: 10%;
+        h1{
+            font-size: 74px;
+            line-height: 100px;
+            margin-bottom: 5px;
+            padding-bottom: 80px;
+        }
     }
-    
-    .columna3, .columna4{
-        display: block;
-    }
-
-    .columna3 h1{
-        font-size: 49px;
-        line-height: 70px;
-        margin-bottom: 5px;
-        margin-top: 15px;
-        text-align: center;
-    }
-
-    .columna3grid{
+    .columna4{
+        flex-basis: 50% ;
         display: flex ;
+        justify-content: center ;
         flex-direction: column ;
-        background: map-get($colorespagina, grisAcio);
-    }
-
-    .columna3grid div{
-        object-fit: cover ;
-    }
-
-    .columna3grid div img{
-        object-fit: contain ;
-    }
-
-    .columna3 p{
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-}
-
-/* MARCAS */
-
-.filaMarcas{
-    background-color:  map-get($colorespagina, celeste);
-    h1{
-        font-size: 49px;
-        line-height: 70px;
-        text-align: center;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        margin-bottom: 0;
-        background-color: map-get($colorespagina, celeste);
+        background:  map-get($colorespagina, grisAcio);
+        padding-top: 50px ;
+        
+        .columna3grid{
+            display: grid ;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            column-gap: 45px;
+            row-gap: 120px;
+            padding-left: 50px;
+            padding-right: 50px;
+        div{
+            background-color: map-get($colorespagina, celeste);
+            width: 100%;
+            }
+        img{
+            width: 100% ;
+            height: 100%;
+            padding-left: 15px;
+            }
+        p{
+            color: map-get($colorletra, LetraBlanca);
+            text-align: center;
+            background-color: rgba(63,61,71,255);
+            margin-bottom: 0;
+            }
+        }
     }
 }
 
 
-/* GRID MARCAS */
+  /* MARCAS */
 
+  
 
-.gridMarcas{
-    background-color: $colorceleste ;
-    @include grids;
-    div{
-        @include flexgrids;
-        background-color: map-get($colorespagina, grisAcio);
+    .filaMarcas{
+        background-color:  map-get($colorespagina, celeste);
+        h1{
+            font-size: 49px;
+            line-height: 70px;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 0;
+            background-color: map-get($colorespagina, celeste);
+            color: white;
+        }
     }
-    img{
-        align-self: center;
-        width: 200px;
-        height: 200px;
-        padding: 20px;
-    }
-    p{
-        padding: 20px;
-    }
-}
-
-
-/* PRUEBA MENU HAMBURGUESA */
-
-
-
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-    display: none;
-    a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-    }  
-  }
-  
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: map-get($colorletra, LetraBlanca);
-  }
-  
-  .topnav .icon {
-    display: none;
-  }
-
-  @media screen and (min-width: 320px) and (max-width: 480px){
-    .topnav{
-        display: flex;
-        justify-content: center;
-        a{
-            font-size: 13px;
-        }   
+    .gridMarcas{
+        background-color: $colorceleste ;
+        @include grids;
+        div{
+            @include flexgrids;
+            background-color: map-get($colorespagina, grisAcio);
+        }
+        img{
+            align-self: center;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+        }
+        p{
+            padding: 20px;
+            color: white;
+        }
     }
 
-  }
-
-
-  /* TERMINO LA PRUEBA */
 
   /* NOSOTROS */
   
@@ -433,24 +246,204 @@ button{
     }
   }
 
-  .gridNosotros{
-    background-color: $colorceleste;
-    @include gridsNosotros;
-    div{
-        @include flexgrids;
-        background-color:  map-get($colorespagina, grisAcio);
-    }
-    img{
-        align-self: center;
-        width: 250px;
-        height: 250px;
-        padding: 20px;
-    }
-    p{
-        padding: 20px;
-        color: map-get($colorletra, LetraBlanca);
-    }
+.gridNosotros{
+background-color: $colorceleste;
+@include gridsNosotros;
+div{
+    @include flexgrids;
+    background-color:  map-get($colorespagina, grisAcio);
 }
+img{
+    align-self: center;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+}
+p{
+    padding: 20px;
+    color: map-get($colorletra, LetraBlanca);
+}
+}
+
+/* MEDIA QUERIES INDEX // DEMAS PAGINAS + ANIDACIÓN */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    
+    .contenido{
+    nav{
+        display: flex ;
+        justify-content: center ;
+        align-items: center;
+        ul{
+            display: none;
+        }
+    }
+    .fila-1{
+        display: flex ;
+        flex-direction: column;
+        .columna1{
+            display: flex;
+            flex-direction: column ;
+            padding-left: 8%;
+            padding-right: 8%;
+            h1{
+                font-size: 49px;
+                line-height: 70px;
+                margin-bottom: 5px;
+                margin-top: 15px;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            h2{
+                display: flex ;
+                justify-content: center ;
+                align-items: center; 
+            }
+            #button{
+                margin-bottom: 30px;
+                align-self: center;
+            }
+        
+        }
+        .columna2{
+            display: flex;
+            flex-direction: column ;
+            .small-img-row{
+                display: flex;
+                flex-direction: column ;
+            }
+            .caja1, .caja2{
+                display: flex ;
+                flex-wrap: nowrap;      
+                padding: 20px;
+                .img-chica{
+                    margin: 20px;
+                }  
+            }
+            h2{
+                position: absolute;
+                left: 5%;
+                top: 12% ;
+                font-size: 80px;
+                opacity: 0.3;
+            }
+        }  
+    }
+    }
+    
+    
+    /* PRODUCTOS */
+
+    .contenido{
+        .fila2{
+            display: flex ;
+            flex-direction: column ;
+            .columna3{
+                display: block;
+                padding-left: 10%;
+                padding-right: 10%;
+                h1{
+                    font-size: 40px;
+                    line-height: 70px;
+                    margin-bottom: 5px;
+                    margin-top: 15px;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+            }
+            .columna4{
+                display: block;
+                .columna3grid{
+                    display: flex ;
+                    flex-direction: column ;
+                    background: map-get($colorespagina, grisAcio);
+                    row-gap: 60px;
+                    div{
+                        object-fit: cover ;
+                        img{
+                            object-fit: contain ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* MARCAS */
+
+    .gridMarcas{
+        display: flex;
+        flex-direction: column;
+        div{
+            display: block;
+        }
+    }
+
+
+    /* NOSOTROS */
+
+    .filaNosotros{
+        h1{
+            font-size: 30px;
+        }
+    }
+    .gridNosotros{
+        display: flex;
+        flex-direction: column;
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
+
+/* FIN MEDIA QUERIES */
+
+
+/* PRUEBA MENU HAMBURGUESA */
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    display: none;
+    a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }  
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: map-get($colorletra, LetraBlanca);
+  }
+  .topnav .icon {
+    display: none;
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    .topnav{
+        display: flex;
+        justify-content: center;
+        a{
+            font-size: 13px;
+        }   
+    }
+  }
+
+  /* TERMINO LA PRUEBA */
 
 /* PANEL DE CLIENTES */
 
